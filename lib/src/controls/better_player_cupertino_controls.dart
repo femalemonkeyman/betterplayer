@@ -490,6 +490,12 @@ class _BetterPlayerCupertinoControlsState
       ),
       child: Row(
         children: <Widget>[
+          BackButton(
+            onPressed: () async {
+              await Navigator.maybePop(context);
+              await Navigator.maybePop(context);
+            },
+          ),
           if (_controlsConfiguration.enableFullscreen)
             _buildExpandButton(
               backgroundColor,

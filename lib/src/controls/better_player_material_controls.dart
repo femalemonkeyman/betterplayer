@@ -199,6 +199,13 @@ class _BetterPlayerMaterialControlsState
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
+                    BackButton(
+                      onPressed: () async {
+                        await Navigator.maybePop(context);
+                        await Navigator.maybePop(context);
+                      },
+                    ),
+                    Spacer(),
                     if (_controlsConfiguration.enablePip)
                       _buildPipButtonWrapperWidget(
                           controlsNotVisible, _onPlayerHide)
